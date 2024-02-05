@@ -1,0 +1,85 @@
+def ques1(sc):
+    print("""who developed the python language?
+                  a.Zim den
+                  b.Guido van Rossum
+                  c.Niene Stom
+                  d.Wick van Rossum""")
+    reply=input("Do u want to skip the Ques?")
+    if reply=="no":
+        ans=input("enter ur answer")
+        if ans=="b":
+            sc+=1
+            print("Wow!u got one point")
+            quit=input("Do u want to quit the quiz")
+            if quit=="yes":
+                print("ur total score is:",sc)
+            elif quit=="no":
+                ques2(sc)
+        else:
+            sc-=1
+            print("u got wrong answer")
+            quit=input("Do u want to quit the quiz")
+            if quit=="yes":
+                print("ur total score is:",sc)
+            elif quit=="no":
+                ques2(sc)
+    elif reply=="yes":
+        ques2(sc)
+            
+def ques2(sc):
+    print("""What is the maximum possible length of an identifier?
+             a.16
+             b.32
+             c.64
+             d.None of the above""")
+    reply=input("Do u want to skip the Ques?")
+    if reply=="no":
+        ans=input("enter ur answer")
+        if ans=="d":
+            sc+=1
+            print("Wow!u got one point")
+            quit=input("Do u want to quit the quiz")
+            if quit=="yes":
+                print("ur total score is:",sc)
+            elif quit=="no":
+                ques3(sc)
+        else:
+            sc-=1
+            print("u got wrong answer")
+            quit=input("Do u want to quit the quiz")
+            if quit=="yes":
+                print("ur total score is:",sc)
+            elif quit=="no":
+                ques3(sc)
+    elif reply=="yes":
+        ques3(sc)    
+    
+    
+        
+def ques3(sc):
+    print("""In which year the python langusge developed?
+            a.1995
+            b.1972
+            c.1981
+            d.1989""")
+    reply=input("Do u want to skip the Ques?")
+    if reply=="no":
+        ans=input("enter ur answer")
+        if ans=="d":
+            sc+=1
+            print("Wow!u got one point")
+            print("ur total score is:",sc)
+            
+        else:
+            sc-=1
+            print("u got wrong answer")
+            quit=input("Do u want to quit the quiz")
+            print("ur total score is:",sc)
+            
+    elif reply=="yes":
+        print("ur total score is:",sc)
+          
+name=input("Hi What's your name")
+print("Hello",name,"Welcome to the quiz")
+sc=0
+ques1(sc)
