@@ -1,4 +1,46 @@
-Langusge Used:python
-Description:
-      If customer decides to buy a new bike,He don't want to visit the showroom to check for the availability of his desired bike. He just simply visit the show room website and by entering the features as he likes 
-      and get the information of bike availability  in that showroom.
+def check_availability(name,cc):
+    if name.lower()=='pulsur':
+        if cc==150 or cc==200:
+            color=input("Enter the color: ")
+            if color.lower()=='red' or color.lower()=='blue':
+                return "Bike is available"
+            else:
+                return f"Bike with color-{color} is not available"
+        elif cc==650:
+            color=input()
+            if color.lower()=='black':
+                return "Bike is available"
+            else:
+                return f"Bike with Color-{color} is not available"
+        else:
+            return f"Bike with CC-{cc} is not available"
+    elif name.lower()=='hero':
+        if cc==150:
+            color=input("Enter the color: ")
+            if color.lower()=='green' or color.lower()=='black':
+                return "Bike is available"
+            else:
+                return f"Bike with Color-{color} is not available"
+        elif cc==180:
+            color=input("Enter the color: ")
+            if color.lower()=='orange':
+                return "Bike is available"
+            else:
+                return f"Bike with Color-{color} is not available"
+        else:
+            return f"Bike with CC-{cc} is not available"
+    elif name.lower()=='royal enfield':
+        if cc==500:
+            color=input("Enter the color")
+            if color.lower()=='bottlegreen' or color.lower()=='silver':
+                return "Bike is available"
+            else:
+                return f"Bike with Color-{color} is not available"
+        else:
+            return "Sorry! Bike is not available"
+
+print("Welcome to the Bike showroom")        
+name=input("Enter the company name of Bike: ")
+cc=int(input("Enter the CC you expected: "))
+print(check_availability(name,cc))
+            
